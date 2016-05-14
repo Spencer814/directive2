@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="editableApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Editable DOM</title>
+	<link rel="stylesheet" href="make-editable.css">
+</head>
+<body ng-controller="appCtrl">
+	<form name="added">
+		<div make-editable>
+			<h1>Edit This Text</h1>
+			<p>Currently, the delete button will only delete anything added after the second entry. Fixes to come!</p>
+		</div>
+
+		<div make-editable>
+			<h1>Edit This Text Also</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, assumenda et quis, veritatis culpa autem repellendus reprehenderit quia atque amet possimus quas maiores. Impedit dignissimos, hic similique maiores sint aspernatur.</p>
+		</div>
+
+		<div make-editable id="content" ng-repeat="content in edit.contents">
+			<h1>Edit This Additional Text</h1>
+			<p>Lorem ipsum dolor sit amet...</p>
+		</div>
+	</form>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="make-editable.js"></script>
+</body>
+</html>

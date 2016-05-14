@@ -1,0 +1,23 @@
+body {
+	background: black;
+}
+div.ng-scope {
+	background: white;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1em;
+	padding-bottom: 1em;
+	width: 50%;
+	border: 1px solid black;
+}
+div#content.ng-scope {
+	background: white;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 1em;
+	padding-bottom: 1em;
+	width: 50%;
+}
+.editable {
+	color: red;
+}

@@ -1,0 +1,8 @@
+<div class="edited" ng-init="userEdit = false" ng-transclude contenteditable="{{userEdit}}" ng-class="{editable: userEdit}">
+</div>
+<div class="edit-control">
+	<button ng-click="userEdit = true" ng-show="!userEdit">Edit</button>
+	<button ng-click="userEdit = false" ng-show="userEdit">Save Changes</button>
+	<button ng-click="append()">Add</button>
+	<button ng-click="delete()">Delete</button>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "directive2",
+  "description": "In the future I will fix the issue with the delete button.",
+  "main": "app/make-editable.js",
+  "authors": [
+    "Andre Newman <andre.d.newman@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Spencer814/directive2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "jasmine-core": "jasmine#^2.4.1"
+  }
+}

@@ -1,26 +1,26 @@
 angular.module('editableApp', [])
-.controller('appCtrl', function($scope, $compile) {
-	var counter = 0;
-	$scope.edit = {
-		contents: []
-	};
+.controller('appCtrl', function($scope) {
+
+	$scope.items = [];
+	
 	$scope.append = function() {
-		$scope.edit.contents.push({
-			div: counter++
+		$scope.items.push({
+			title: "Hello",
+			contents: "Lorem ipsum..."
 		});
-		var addedEdit = $compile('<div new-edit></div>')($scope);
-		document.getElementById('content');
 	};
-	$scope.delete = function(content) {
-		$scope.edit.contents.splice($scope.edit.contents.indexOf(content), 1);
-		document.getElementById('content');
-	}
+
+	$scope.append();
+
+	$scope.delete = function(index) {
+		$scope.items = $scope.items.slice(0,index).concat($scope.items.slice(index+1));
+	};
 })
 .directive('makeEditable', function() {
 	return {
 		restrict: 'AE',
 		transclude: true,
 		templateUrl: 'make-editable.html',
-		scope: true,
+		scope: false,
 	}
 });
